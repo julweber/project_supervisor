@@ -17,8 +17,8 @@ Prints project information for the given project
 
 #### General
 
-    bundle exec ruby bin/print_project_status.rb <project_id> <time_budget_in_days(optional)>
+    bundle exec ruby bin/print_project_status.rb <project_id> <time_budget_in_days(optional)> <internal average hour cost>
 
 #### Example
 
-    bundle exec ruby bin/print_project_status.rb 7723495 120
+    bundle exec ruby bin/print_project_status.rb 7723495 120 60
