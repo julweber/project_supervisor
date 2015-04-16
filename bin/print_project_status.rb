@@ -41,25 +41,29 @@ class TimeTracker
 
     puts "4. Total Billable hours:"
     puts "-"*10
-    puts ana_result[:total_billable_hours]
-    total_billable_workdays = ana_result[:total_billable_hours]/WORKHOURS_PER_DAY
+    puts ana_result[:total_billable_hours].round(2)
+    total_billable_workdays = (ana_result[:total_billable_hours]/WORKHOURS_PER_DAY).round(2)
     puts "#{total_billable_workdays} days"
+    percentage = ((ana_result[:total_billable_hours] / ana_result[:total_hours]) * 100).round(2)
+    puts "Percentage: #{percentage} %"
     puts ""
 
     puts "5. Total Unbillable hours:"
     puts "-"*10
-    puts ana_result[:total_unbillable_hours]
-    puts "#{ana_result[:total_unbillable_hours]/WORKHOURS_PER_DAY} days"
+    puts ana_result[:total_unbillable_hours].round(2)
+    puts "#{(ana_result[:total_unbillable_hours]/WORKHOURS_PER_DAY).round(2)} days"
+    percentage = ((ana_result[:total_unbillable_hours] / ana_result[:total_hours]) * 100).round(2)
+    puts "Percentage: #{percentage} %"
     puts ""
 
     puts "6. Total hours:"
     puts "-"*10
-    puts ana_result[:total_hours]
-    puts "#{ana_result[:total_hours]/WORKHOURS_PER_DAY} days"
+    puts ana_result[:total_hours].round(2)
+    puts "#{(ana_result[:total_hours]/WORKHOURS_PER_DAY).round(2)} days"
     puts ""
 
     unless time_budget.nil?
-      left = time_budget - total_billable_workdays
+      left = (time_budget - total_billable_workdays).round(2)
       puts "7. Billable Time Budget left in days:"
       puts "-"*10
       pp "#{left} billable days left"
