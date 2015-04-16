@@ -1,0 +1,36 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    byebug (4.0.5)
+      columnize (= 0.9.0)
+    coderay (1.1.0)
+    columnize (0.9.0)
+    harvested (2.0.0)
+      hashie (~> 1)
+      httparty
+      json
+    hashie (1.2.0)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.2)
+    method_source (0.8.2)
+    multi_xml (0.5.5)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-byebug (3.1.0)
+      byebug (~> 4.0)
+      pry (~> 0.10)
+    rake (10.4.2)
+    slop (3.6.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  harvested (~> 2.0.0)
+  pry
+  pry-byebug
+  rake

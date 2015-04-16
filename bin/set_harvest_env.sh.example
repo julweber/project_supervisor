@@ -1,0 +1,3 @@
+export HARVEST_ACCOUNT_HOST=avarteqgmbh
+export HARVEST_USERNAME=user@avarteq.de
+export HARVEST_TOKEN=auth_token_here
